@@ -38,7 +38,7 @@ export function slugify(text) {
 
 export async function fetchTags() {
   try {
-    const res = await fetch(`${strapiUrl}/api/tags`, {
+    const res = await fetch(`${strapiUrl}/api/tags?pagination[start]=0&pagination[limit]=100`, {
       method: 'GET',
       headers: headerOptions,
     })
